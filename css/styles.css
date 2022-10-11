@@ -9,10 +9,14 @@
     --hero-button-hover: #188CE8;
 }
 .list {
-    list-style: none;}
+    list-style: none;
+padding-left: 0;
+margin: 0;
+}
 
 .link {
     text-decoration: none;
+    color: inherit;
 }
 p,
 h1,
@@ -31,20 +35,25 @@ ol {
 }
 
 button {
+    display: block;
     cursor: pointer;
+    bottom: none;
+    border-radius: 4px;
 }
 
 address {
     font-style: normal;
+    margin-top: 20px;
 }
 img {
     display: block;
+    min-width: 100%;
+    height: auto;
 }
 
 .container {
     width: 1200px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 0 15px;
     margin: 0 auto;
 }
 .section {
@@ -89,17 +98,21 @@ header {
     border-bottom: solid 1px #ececec;
 }
 
+
+
+
 .header-list{
     display: flex;
     gap: 50px;
 }
-.header-contacts-list{
-    display: flex;}
+.header-contacts-list {
+    display: flex;
+    margin-left: auto;
+ }
 
 .header-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
 .header-nav{display: flex;
@@ -126,15 +139,18 @@ header {
 .header-list-item {
     padding-top: 32px;
     padding-bottom: 32px;
-    margin-right: 50px;
+    
 }
-.contacts-list-item{
+/* .contacts-list-item {
     padding-top: 32px;
-    padding-bottom: 32px;
+    padding-bottom: 32px;} */
+
+.contacts-list-item:not(:last-child) {
     margin-right: 50px;
 }
+
 .hero-title{
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 .hero-sec{
     display: flex;
@@ -161,13 +177,6 @@ header {
     color: #2196F3;
 }
 
-.hero {
-    background-color: #2F303A;
-}
-.hero-adv{
-    padding-top: 94px;
-    padding-bottom: 94px;
-}
 .hero-title {
     font-weight: 900;
     font-size: 44px;
@@ -220,7 +229,9 @@ header {
 }
 /*----------project-------  */
 
-.project {}
+.project {
+    padding-top: 0;
+}
     
 .project-sec {
     display: flex;
@@ -290,21 +301,21 @@ header {
 
  .footer {
     background-color: #2F303A;
-    height: 252px
+    padding: 60px 0;
 }
       
  .footer-address {}
       
 .footer-list {}
       
-.footer-list-item {
+.footer-list-item not:(:last-child) {
     margin-bottom: 9px;
 }
 .footer-list-item: last-child {
     margin-bottom: 0px;
 }
  .logo-web{
-    margin-bottom: 20px;
+    
  }
 .footer-link {
      font-weight: 400;
@@ -347,6 +358,7 @@ header {
     letter-spacing: 0.03em;
     text-align: center;
     background-color: #F5F4FA;
+    color: #212121;
     border-radius: 4px;
     border: none;
     cursor: pointer;
@@ -363,9 +375,10 @@ header {
 .project-list{
     display: flex;
     flex-wrap: wrap;
+    gap: 30px;
 }
 .project-list-item {
-    width: calc((100%-60px)/3)
+    
 }
 
 
